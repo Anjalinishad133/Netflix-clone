@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0.9) 0%, 
+            rgba(0, 0, 0, 0.5) 50%, 
+            rgba(0, 0, 0, 0.6) 70%, 
+            rgba(0, 0, 0, 1) 100%
+        ),
+        url('./images/netflix-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 90px;
+    width: 100%;
+    /* position: absolute; */
+    /* top: 0; */
+    /* z-index: 10; */
+}
+
+nav img{
+    width: 10%;
+}
+
+.nav-btn {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.lang-btn{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    gap: 15px;
+}
+
+.sign-in-btn{
+    padding: 10px 40px;
+    background-color: #c11119;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: -110%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170%; 
+    height: 115%;
+    border-top: 4px solid #e50914; 
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    z-index: 1;
+    /* background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%); */
+} 
+
+.main-bg-container {
+    flex: 1;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.middle-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movies-text{
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.starts-text{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.ready-to-watch-text{
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.first-one input{
+    background-color: #101618;
+    width: 10%;
+}
+
+.movies-section{
+    background-color: black;
+    padding: 50px 30px;
+}
+
+.img-row{
+    display: flex;
+    padding-left: 90px;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.trending-card{
+    position: relative;
+    transition: transform 0.3s ease;
+    /* overflow: hidden; */
+}
+
+.trending-card:hover {
+    transform: scale(1.05);
+}
+
+.image-item{
+    border-radius: 15px;
+}
+
+.number{
+    position: absolute;
+    bottom: 30px;
+    left: -25px;
+    font-size: 100px;
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
+
+
+
+
+.cards-section{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+    background-color: black;
+    color: white;
+}
+
+.section-heading{
+    padding-left: 90px;
+    color: white;
+}
+
+.card-row{
+    display: flex; 
+    justify-content: center;
+    gap: 15px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    padding: 25px 15px;
+    border-radius: 15px;
+    gap: 15px;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);;
+    height: 30vh;
+    position: relative;
+}
+
+.card-heading{
+    font-size: 25px;
+    color: white;
+}
+.card-desc{
+    font-size: 18px;
+    color: white;
+}
+
+.card-icon{
+    align-self: end;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* question section */
+.questions-section{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 50px 110px;
+    color: white;
+}
+
+.question{
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.questions-asked{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #2d2d2d;
+}
+
+.ques{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.question-span i{
+    font-size: 50px;
+}
+
+.question-span:hover{
+    background-color: #414141;
+}
+
+
+
+.below-question-section{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    gap: 20px;
+}
+
+.email-input{
+    width: 40%;
+    display: flex;
+    gap: 10px;
+}
+
+.email-input input{
+    width: 70%;
+    padding: 15px;
+    background-color: #0f0f0f;
+    border: 1px solid rgb(130, 125, 125);
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+}
+
+.email-input input:focus{
+    border: 1px solid white;
+}
+
+.btn-design{
+    width: 30%;
+    padding: 15px;
+    background-color: #c11119;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+footer{
+    background-color: black;
+    padding: 50px 120px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.part1{
+    align-items: start;
+    text-align: start;
+}
+
+.part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.part2-section1, .part2-section2, .part2-section3, .part2-section4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.part3{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.btn1{
+    width: 12%;
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.last-p{
+    color: gray;
+    font-size: 14px;
+}
+
+.last-p u{
+    color: #448ef4;
+}
+
+
+
+@media (max-width: 1132px) {
+    nav img{
+        width: 15%;
+    }
+}
+
+@media (max-width: 1132px) {
+    nav img{
+        width: 20%;
+    }
+}
+
+@media (max-width: 555px) {
+    nav{
+        padding: 10px;
+    }
+    nav img{
+        width: 20%;
+    }
+
+    .lang-btn, .sign-in-btn{
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    nav img{
+        width: 25%;
+    }
+}
+
+
